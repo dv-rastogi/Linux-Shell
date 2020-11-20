@@ -1,0 +1,30 @@
+COMMAND: 
+	ls
+
+SOURCE CODE:
+	external/lssh.c
+
+USAGE: 
+	ls [OPTION]... [FILE]... 
+
+FUNCTION:
+	List information about the FILEs (the current directory by default)
+	Sort entries alphabetically (if sort-type OPTION not specified)
+
+OPTIONS:
+	-a		do not ignore entries starting with '.'
+	-X 		display entries sorted according to their extensions
+
+CASES/ERRORS HANDLED:
+	1. Invalid options exits the command
+	2. Invalid permissions for a directory
+	3. Directory not found
+	4. Handling shortcuts such as "~" [for /home dir]
+	5. Multiple options
+	6. Ordering of options & arguments
+	7. Assertions
+
+TEST CASES:
+	1. ls					[display contents of the current dir (alphabetically sorted)]
+	2. ls -a folder1 folder2		[display contents of folder1 and folder2 along with hidden files (alphabetically sorted)]
+	3. ls -a -X folder1			[display contens of folder1 along with hidden files, sorted according to their extensions]

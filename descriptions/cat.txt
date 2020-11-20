@@ -1,0 +1,27 @@
+COMMAND: 
+	cat
+
+SOURCE CODE:
+	external/catsh.c
+
+USAGE: 
+	cat [OPTION]... [FILE]...
+
+FUNCTION:
+	Concatenate FILE(s) to standard output
+
+OPTIONS:
+	-n		number all output lines
+	-E 		display $ at the end of each line
+
+CASES/ERRORS HANDLED:
+	1. Invalid options exits the command
+	2. Invalid file names exits the command with appropriate error description
+	3. Multiple options
+	4. Ordering of options & arguments 
+	5. Assertions
+
+TEST CASES:
+	1. cat file.txt			[outputs file.txt contents]
+	2. cat -n file.txt 		[outputs file.txt contents with lines numbered]
+	3. cat -n -E file.txt file1.c 	[outputs file.txt & file1.c contents with lines numbered and $ displayed at each line end]

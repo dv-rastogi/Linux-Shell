@@ -1,0 +1,31 @@
+COMMAND: 
+	cd
+
+SOURCE CODE:
+	Internal command [shell.c]
+
+USAGE: 
+	cd -[LP] [DIR]
+
+FUNCTION:
+	Change the shell working directory to DIR [Resolve symbolic links for PATH if specified]
+	Change the PATH variable of shell accordingly 
+	Maintain correlation between the realpath and PATH var. of shell
+
+OPTIONS:
+	-L 		force symbolic links to be followed (default)
+	-P      use the physical directory structure without following symbolic links
+
+CASES/ERRORS HANDLED:
+	1. Invalid number of arguments
+	2. Invalid options
+	3. Directory doesn't exist
+	4. Resolving realpath of directories
+	5. Changing directories permissive errors
+	6. Shortcuts to /home "~"
+	7. Assertions
+
+TEST CASES:
+	1. cd folder1/folder2 			[change the current dir. to folder1/folder2]
+	2. cd -L folder1/folder2		[change the current dir. to folder1/folder2]
+	3. cd -P folder1/folder2/folder3	[change the current dir. to folder1/folder2/folder3, resolving symbolic links in PATH and updating accordingly]

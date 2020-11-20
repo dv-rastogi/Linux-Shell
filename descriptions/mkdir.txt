@@ -1,0 +1,30 @@
+COMMAND: 
+	mkdir
+
+SOURCE CODE:
+	external/mkdirsh.c
+
+USAGE: 
+	mkdir [OPTION]... DIRECTORY...
+
+FUNCTION:
+	Create the DIRECTORY(ies), if they do not already exist.
+
+OPTIONS:
+	-p 		no error if existing, make parent directories as needed
+	-v		print a message for each created directory
+
+CASES/ERRORS HANDLED:
+	1. Invalid options exits the command
+	2. Missing arguments
+	3. Multiple options
+	4. Automatically resolving symbolic links with -p
+	5. Directory already exists
+	6. Directory permission errors
+	7. Ordering of options & arguments
+	8. Assertions
+
+TEST CASES:
+	1. mkdir folder						[making a directory in current dir. with name 'folder']
+	2. mkdir -v folder1 folder2				[making dir folder1 and folder2 with dir. messages printed]
+	3. mkdir -v -p folder/folder1/folder2 			[make parent dir. if they don't exist, resolving symbolic links along the way while printing active messages]

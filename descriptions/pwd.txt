@@ -1,0 +1,25 @@
+COMMAND: 
+	pwd
+
+SOURCE CODE:
+	Internal command [shell.c]
+
+USAGE: 
+	pwd -[LP]
+
+FUNCTION:
+	Print the name of the current working directory
+	The shell maintains a PATH variable of own besides the realpath
+
+OPTIONS:
+	-L 		print the value of $PWD if it names the current working directory (default)
+	-P      print the physical directory, without any symbolic links
+
+CASES/ERRORS HANDLED:
+	1. Invalid number of arguments
+	2. Invalid options
+
+TEST CASES:
+	1. pwd 		[print the current working directory]
+	2. pwd -L 	[print the current working directory]
+	3. pwd -P 	[print the current working directory resolving symlinks]

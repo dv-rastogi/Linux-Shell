@@ -1,0 +1,19 @@
+COMMAND: 
+	exit
+
+SOURCE CODE:
+	Internal command [shell.c]
+
+USAGE: 
+	exit [n]
+
+FUNCTION:
+	Exit the shell with return status of n
+
+CASES/ERRORS HANDLED:
+	1. Invalid number of arguments
+	2. Default exit status
+
+TEST CASES:
+	1. exit 	[exit the shell]
+	2. exit 4 	[exit the shell with return status of 4]

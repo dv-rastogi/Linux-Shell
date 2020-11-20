@@ -1,0 +1,29 @@
+COMMAND: 
+	rm
+
+SOURCE CODE:
+	external/rmsh.c
+
+USAGE: 
+	rm [OPTION]... [FILE]...  
+
+FUNCTION:
+	Remove (unlink) the FILE(s)
+
+OPTIONS:
+	-i		ask for confirmations
+	-d 		removing empty directories
+
+CASES/ERRORS HANDLED:
+	1. Invalid options exits the command
+	2. Invalid permissions for a directory/file
+	3. Directory/File not found
+	4. Checking if a file is directory or not
+	5. Multiple options
+	6. Ordering of options & arguments
+	7. Assertions
+
+TEST CASES:
+	1. rm file1			[remove file1 present in the current directory]
+	2. rm -d file1 folder1		[remove file1 and as folder1 (-d option specified)]
+	3. rm -i -d folder1		[remove folder1, but first ask for confirmation]

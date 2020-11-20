@@ -1,0 +1,26 @@
+COMMAND: 
+	history
+
+SOURCE CODE:
+	Internal command [shell.c]
+
+USAGE: 
+	history [OPTION] [ARGS..]
+
+FUNCTION:
+	Display or manipulate the history list and file
+	History file is maintained as "history.txt"
+	History list is implemeneted as a static circular queue with user defined size
+
+OPTIONS:
+	-c 		clear the history list & file, ignore the ARGS
+	-s      append all the ARGS at the end of history file and list
+
+CASES/ERRORS HANDLED:
+	1. Invalid number of arguments
+	2. Invalid options
+
+TEST CASES:
+	1. history 			[print the current history]
+	2. history -c 			[clear the current history]
+	3. history -s Hello World	[append Hello World to history]

@@ -1,0 +1,26 @@
+COMMAND: 
+	date
+
+SOURCE CODE:
+	external/datesh.c
+
+USAGE: 
+	date [OPTION]
+
+FUNCTION:
+	Display the current time in occordance with the given OPTION
+	By default, displays local time
+
+OPTIONS:
+	-u 		display the date & time in UTC time
+	-I		display the date in ISO 8601 format
+
+CASES/ERRORS HANDLED:
+	1. Invalid options exits the command
+	2. Extra options exits the command
+
+TEST CASES:
+	1. date			[display date/time in local time]
+	2. date -u 		[display date/time in UTC time]
+	3. date -I 		[display date in ISO 8601 format]
+	

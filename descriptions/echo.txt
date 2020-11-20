@@ -1,0 +1,30 @@
+COMMAND: 
+	echo
+
+SOURCE CODE:
+	Internal command [shell.c]
+
+USAGE: 
+	echo [-ne] [arg ...]
+
+FUNCTION:
+	Write arguments to the standard output
+	Arguments will be printed as stated, unless containing a space delimiter of '&'
+
+OPTIONS:
+	-n		do not append a newline
+	-e 		recognize escape sequences
+
+Escape sequences:
+	\t 		append a tab
+	\n 		append a newline
+
+CASES/ERRORS HANDLED:
+	1. Invalid options will automatically be treated as arguments
+	2. Multiple options
+	3. Recognizing escape sequences
+
+TEST CASES:
+	1. echo Hello World		[outputs Hello World to stdout]
+	2. echo -n Hello World 		[outputs Hello World without any space to stdout]
+	3. echo -e Hello \t World 	[outputs Hello   World to stdout]

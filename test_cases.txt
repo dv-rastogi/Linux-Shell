@@ -1,0 +1,62 @@
+START OF TEST CASE 1:
+
+echo Hello World
+echo -n Hello World
+echo -n -e Hello \t World
+pwd
+pwd -P
+pwd -L
+cd external
+ls
+pwd
+history
+history -c
+history -s Hello World
+history
+cat catsh.c
+cat -n -E rmsh.c
+cd ..
+pwd
+date
+date -I
+date -u
+exit 1
+
+END OF TEST CASE 1.
+
+START OF TEST CASE 2:
+
+ls
+pwd
+cat -n history.txt
+cat -E Makefile
+mkdir try
+ls
+mkdir try
+ls
+mkdir -p -v try/try1/try2/try3
+cd try/try1/try2/try3
+ls
+cd ..
+rm -d try3
+cd ..
+rm -d try2
+cd ..
+rm try1
+rm -d try1
+cd ..
+rm -d try
+pwd
+ls
+rm file.txt
+[create file.txt]
+ls
+rm -i file.txt
+ls -a
+ls -X
+ls -a -X external
+
+END OF TEST CASE 2.
+
+For checking workings with symlinks, explicitly create them and then execute the shell.
+More error messages could be checked accordingly by giving false commands/arguments/options.

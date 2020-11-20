@@ -1,0 +1,52 @@
+Hello World
+history
+cat catsh.c
+cat -n -E rmsh.c
+cd ..
+pwd
+date -I
+date
+date -u
+ls
+cat history.txt
+exit 1
+ls
+pwd
+cat -n history.txt
+cat -E Makefile
+mkdir try
+mkdir try
+ls
+mkdir -p -v try/try1/try2/try3
+cd try/try1/try2/try3
+ls
+cd ..
+rm -d try3
+ls
+rm -d try2
+cd ..
+rm -d try2
+cd ..
+rm try1
+ls
+rm -d try1
+ls
+cd ..
+rm -d try
+ls
+pwd
+rm file.txt
+exit
+ls
+rm -i file.txt
+ls
+rm -i file.txt
+ls
+ls -a
+ls -X
+ls -a -X
+ls -a -X external
+exit
+help
+ls
+exit 6
